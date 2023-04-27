@@ -1,0 +1,84 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(0, 174, 255);
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.container{
+    background: white;
+    color:darkblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 350px;
+    text-align: left;
+    height: 220px;
+    transition: height .3s ease;
+}
+.container.active{
+    height: 470px;
+}
+.header{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.subtxt{
+    font-size: 14px;
+}
+.input-sect{
+    display: flex;
+    flex-direction: column;
+}
+.input-sect input{
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.input-sect .btn{
+    background: rgb(0, 174, 255);
+    color: antiquewhite;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.input-sect .btn:hover{
+    background: white;
+    border: 1px solid rgb(0, 174, 255);
+    color: rgb(0, 174, 255);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,.4);
+    transition: all .2s ease-in-out;
+}
+.container .result{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 25px 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.container .result img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+.container.active .result{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .5s .05s ease;
+}
